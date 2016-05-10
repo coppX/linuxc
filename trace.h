@@ -1,8 +1,8 @@
-#include"unp.h"
-#include<netinet/in_systm.h>
-#include<netinet/ip.h>
-#include<netinet/ip_icmp.h>
-#include<netinet/udp.h>
+#include "unp.h"
+#include <netinet/in_systm.h>
+#include <netinet/ip.h>
+#include <netinet/ip_icmp.h>
+#include <netinet/udp.h>
 
 #define BUFSIZE       1500
 struct rec{
@@ -12,11 +12,11 @@ struct rec{
 };
 char  recvbuf[BUFSIZE];
 char  sendbuf[BUFSIZE];
-int datalen;
-char *host;
+int     datalen;
+char    *host;
 u_short sport,dport;
-int nsent;
-pid_t pid;
+int     nsent;
+pid_t   pid;
 int probe,nprobles;
 int sendfd,recvfd;
 int ttl,max_ttl;
